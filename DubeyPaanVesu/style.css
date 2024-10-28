@@ -1,0 +1,432 @@
+*{
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+       background-color:#F6F0EB;
+       font-family: 'poppins',sans-serif;
+       margin: 0%;
+       /* max-width: 1440px; */
+       /* overflow-x: hidden; */
+       /*overflow hidden ka  matlab nav bar ke ander animation lagege to jo nav bar rightside me ja raha hai wo hide ho */
+
+}   
+.main-contant{
+    overflow-x: hidden;
+    height: 100vh;
+    scroll-behavior: smooth;
+}
+
+header{
+    /* display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:24px 32px; */
+    background-color: #FFFFFF;
+    /* padding:24px 32px; */
+    padding: 24px;
+    
+    /* display: flex; */
+}
+ .header-content{
+    max-width: 1290px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* padding:24px 32px;
+    margin: 0 auto; isse hearder center me aa jayega */
+    margin: 0 auto;
+    /* display: flex; */
+    height: 70px;
+
+ }
+.logo{
+    width: 200px;
+}
+.logo img{
+    width: 100%;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+    /* color: #492118; */
+    
+}
+nav{
+    display: flex;
+
+}
+ /* or */
+ nav a + a{
+    margin-left: 60px;
+ 
+ }
+nav a{
+    font-weight: 700;
+    font-size: 16px;
+    color: #492118; 
+}
+/*  images ke ander ja rahe hai */
+/* .hero-section{
+ 
+} */
+ main{
+    padding: 0 32px;
+ }
+ .hero-section{
+    margin-top: 40px;
+ }
+img{
+    width:100%
+}
+.img-container{
+   max-width: 1200px;
+   
+   margin: 0 auto;
+}
+
+.hero-section p{
+    color: #492118;
+    text-align: center;
+    font-size: 24px;
+}
+.section h2{
+    color:#492118 ;
+    text-align: center;
+    font-size: 24px;
+}
+.section .img-containerfirst{
+    max-width: 1040.87px;
+    
+}
+/* .section{
+    margin-top: 100px;
+} */
+
+/* .section .img-container */
+.img-containerfirst{
+    margin: 0 auto;
+}
+
+.section h2{
+    color:#492118 ;
+    text-align: center;
+    font-size: 24px;
+}
+.section .img-containerfirst{
+    max-width: 960px;
+}
+.section{
+    margin-top: 100px;
+}
+
+/* .section .img-container */
+.img-containerfirst{
+    margin: 0 auto;
+}
+.go-to-top{
+    text-align:right ;
+    max-width:960px;
+    margin: 0 auto;
+    font-size: 32px;
+    margin-top: 88px;
+}
+
+.go-to-top a{
+    text-decoration: underline;
+}
+/* footer p{
+    text-align: center;
+    color: #492118;
+} */
+ .footer-text{
+    text-align: center;
+    color: #492118;
+    margin-top: 40px;
+ }
+ .close-icons{
+    position: absolute;
+    top: 8px;
+    right:14px;
+    cursor: pointer;
+    display: none;
+
+ }
+
+ .hamburger-menu{
+    background-color: #FFFFFF;
+    padding: 3px;
+    height:200px ;
+    width: 200px;
+    position: absolute;
+    border-radius: 50%;
+    /* left: 0; */
+    top: -131px;
+    right: -128px;
+    /* top: -64px;
+    right: -58px; */
+    cursor: pointer;
+    /* display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    /* align-items: flex-end; */ 
+    /* border-radius: ; */
+     
+ }
+
+ .hamburger-icon{
+    font-size: 32px;
+    position: absolute;
+    bottom: 22px;
+    left: 36px;
+    /* font-size: 16px;
+    position: absolute;
+    bottom: 10px;
+    left: 20px; */
+ }
+ .hamburger-menu-container{
+    overflow: hidden;
+    position: relative;/* position relative , partent ke upper lagta hai
+     tab child me position: absolute laga hi ais liye */
+     /* height:48px ;
+     width: 48px; */
+     height: 65px;
+    width: 67px;
+     display: none;
+ }
+ 
+
+/* ------------------------------------------- */
+@media(max-width:1200px){
+    nav a{
+        font-weight: 700;
+        font-size: 16px;
+         /* color: #492118;  */
+    }
+    nav a + a{
+        margin-left: 40px;
+}
+header{
+    padding: 16px 24px;
+}
+}
+
+@media(max-width:960px){
+    nav a{
+        font-weight: 700;
+        font-size: 12px;
+         /* color: #492118;  */
+    }
+    nav a + a{
+        margin-left: 22px;
+}
+.hero-section{
+    margin-top: 48px;
+    border-style: groove;
+}
+.section{
+    margin-top: 42px;
+}
+}
+@media(max-width:768px){
+   header{
+    background-color: transparent;
+    /* background-color: ; */
+    position: sticky;
+    top: 0;
+    /* backdrop-filter: blur(8px) ; */
+    /* overflow: hidden; */
+   }
+   .header-content{
+    min-height: 100px;
+    /* overflow: hidden; */
+   }
+
+   nav{
+    position: absolute;
+    background-color: #ffffffa0;
+    flex-direction: column;
+    backdrop-filter: blur(4px) ;
+    padding: 24px;
+    right: -200px;/*right side me ander chala jayega animation hai */
+    top: 16px;
+    /* display: none; jab animate karte hai to display none nahi karte hai phale se */
+    /* idhar sab kuch hone ke badd display none karwaya hai */
+    transition: right 0.25s ease-in-out;
+   }
+   /* .menu-open nav{
+    display: flex;
+   } */
+
+   nav a+a{
+    margin: 0;
+    margin-top: 16px;
+    
+   }
+   .close-icons,
+   .hamburger-menu-container{
+    
+    display: block;
+
+ }
+ /* .hamburger-menu-container{
+    display: block;
+ } */
+ .menu-open nav{
+    /* display: flex; - jab ham
+    animation dete hai to dislpay:flex, and display:block,& none property kuch nahi lagti*/
+    right: 24px;
+   }
+
+.menu-open .hamburger-menu-container{
+    display: none;
+
+}
+.go-to-top{
+    font-size: 12px ;
+    margin-top: 32px;
+}
+/* --------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------- */
+   
+}
+.contact-info{
+    
+        background-color: #333;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        margin-top: 20px;
+}
+.contact-info a{
+    padding: 10px;
+    
+}
+.contact-left{
+    position: relative;
+    /* left: 10px;
+    bottom: 10px; */
+    left: -159px;
+    bottom: -76px;
+}
+.social-links{
+    position: relative;
+    /* left: 10px;
+    bottom: 10px; */
+    /* left: 137px;
+    bottom: -11px; */
+    left: -14px;
+    bottom: -10px;
+}
+
+/* .allinfo p{
+    font-size: 0.875em;
+    position: relative;
+    left: 5px; */
+/* } */
+.allinfo .paragraph1{
+    display: flex;
+    /* ----- */
+    /* flex-direction: column;
+    align-items: flex-start; */
+
+    /* -------- */
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+}
+
+.paragraph1 p {
+    flex: 1;
+    /* -----------
+    text-align: center;
+    display: flex; */
+    /* ----------- */ 
+    margin: 10 px;
+    /* margin: 10 0 px; */
+    /* ---------------- */
+    line-height: 1.6;
+    color: #eee6e6;
+    
+    min-width: 200px; /* Ensures paragraphs don't get too small */
+    /* text-align:justify; */
+}
+.owner-image {
+    width: 70px; /* Set image width */
+    height: 70px; /* Set image height */
+    /* border-radius: 50%; Make images circular */
+    border-style: outset;
+    margin-right: 10px; /* Space between image and text */
+    /* margin: 0 auto; */
+}
+/* --------------------- */
+ul {
+    list-style-type: disc;
+    /* margin: 10px 0;
+    padding-left: 20px;
+     Indent the list */
+     margin: -7px 0;
+    padding-left: 29px;
+    min-width: 200px;
+}
+
+li {
+    margin: 5px 0; /* Space between list items */
+    text-align: left;
+    margin: 10 px;
+    min-width: 200px;
+}
+/* sliding show in front of website */
+
+
+
+
+
+
+
+
+/* styles.css */
+.slideFirst {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.carousel {
+    position: relative;
+    /* max-width: 200px; Adjust as needed */
+    max-width: 900px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-images img {
+    width: 100%; /* Adjust to your desired size */
+    flex-shrink: 0;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 10px;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
